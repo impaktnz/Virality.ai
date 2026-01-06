@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Virality | Social Distribution Engine</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              DEFAULT: '#FFD700',
+              dark: '#B8860B',
+              light: '#FFEA00',
+            },
+            accent: '#FFD700',
+            dark: {
+              DEFAULT: '#0A0A0A',
+              card: '#141414',
+              border: '#242424',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Montserrat', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      overscroll-behavior-y: contain;
+    }
+    .gold-gradient {
+      background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
+    }
+    .gold-text-gradient {
+      background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass-effect {
+      backdrop-filter: blur(20px);
+      background: rgba(10, 10, 10, 0.7);
+    }
+    .card-shadow {
+      box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.5);
+    }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-thumb { background: #FFD700; border-radius: 10px; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    
+    @keyframes slide-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slide-up {
+      animation: slide-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .safe-bottom {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+  </style>
+  <script type="importmap">
+  {
+    "imports": {
+      "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+      "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+      "react/": "https://esm.sh/react@^19.2.3/",
+      "react": "https://esm.sh/react@^19.2.3"
+    }
+  }
+  </script>
+</head>
+<body class="bg-dark text-white overflow-x-hidden min-h-screen">
+  <div id="root"></div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Viralityai",
+  "description": "Professional multi-platform social media distribution engine. Generate clean, high-performance hooks, scripts, and search-optimized keywords.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
